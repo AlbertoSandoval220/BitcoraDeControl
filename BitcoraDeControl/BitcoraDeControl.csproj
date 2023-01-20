@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SistemaExperto\packages\MySql.Data.8.0.22\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,14 +50,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bitacora.Designer.cs">
+      <DependentUpon>Bitacora.cs</DependentUpon>
+    </Compile>
     <Compile Include="Index.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Index.Designer.cs">
       <DependentUpon>Index.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Bitacora.resx">
+      <DependentUpon>Bitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Index.resx">
+      <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -79,12 +104,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\44.png" />
+    <None Include="Resources\logo LB.png" />
+    <None Include="Resources\logo CETIS44.png" />
+    <None Include="Resources\fBoton1.png" />
+    <None Include="Resources\fBoton.png" />
+    <None Include="Resources\encabezado.png" />
     <Content Include="Resources\fondo2.png" />
     <Content Include="Resources\header.png" />
     <Content Include="Resources\lobobce44.png" />
     <Content Include="Resources\portada.png" />
     <Content Include="Resources\Screenshot 2022-11-25 at 11-08-09 Facebook.png" />
-    <Content Include="Resources\Screenshot 2022-11-25 at 11-33-24 codigo guinda hex - Google Search.png" />
+    <None Include="Resources\Screenshot 2022-11-25 at 11-33-24 codigo guinda hex - Google Search.png" />
     <Content Include="Resources\Screenshot 2022-11-25 at 12-09-54 Noticias CETis 44.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
